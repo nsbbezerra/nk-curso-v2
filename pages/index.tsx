@@ -41,6 +41,7 @@ import {
   AiOutlineOrderedList,
   AiOutlineUser,
   AiOutlineSave,
+  AiOutlineWhatsApp,
 } from "react-icons/ai";
 import pcAnimation from "../animations/dev.json";
 import Lottie from "react-lottie";
@@ -57,6 +58,7 @@ import axios from "axios";
 import { api } from "../configs/axios";
 import * as Yup from "yup";
 import { useRouter } from "next/router";
+import { configs } from "../configs";
 
 interface ISubscribe {
   name: string;
@@ -341,14 +343,18 @@ const Home: NextPage = () => {
               antecedência, e tire todas as suas dúvidas.
             </Text>
 
-            <Button
-              leftIcon={<FaDiscord />}
-              colorScheme="purple"
-              size="lg"
-              mt={5}
-            >
-              Participar da comunidade no Discord
-            </Button>
+            <Link href={configs.discord} passHref>
+              <a target={"_blank"}>
+                <Button
+                  leftIcon={<FaDiscord />}
+                  colorScheme="purple"
+                  size="lg"
+                  mt={5}
+                >
+                  Participar da comunidade no Discord
+                </Button>
+              </a>
+            </Link>
 
             <Box w="fit-content" mt={10}>
               <Heading>Requisitos mínimos</Heading>
@@ -408,7 +414,8 @@ const Home: NextPage = () => {
                   </Tr>
                   <Tr>
                     <Td>
-                      Instalação da Stack de desenvolvimento, IDE e Browser
+                      Instalação da Stack de desenvolvimento, IDE, Browser e
+                      GitHub
                     </Td>
                     <Td w="15%">Aprox. 1 Hora</Td>
                   </Tr>
@@ -608,6 +615,19 @@ const Home: NextPage = () => {
               >
                 Inscrever-se
               </Button>
+            </Link>
+
+            <Link href={`https://wa.me/${configs.whatsapp}`} passHref>
+              <a target={"_blank"}>
+                <Button
+                  leftIcon={<AiOutlineWhatsApp />}
+                  colorScheme="whatsapp"
+                  isFullWidth
+                  mt={3}
+                >
+                  Fale Conosco
+                </Button>
+              </a>
             </Link>
           </Box>
         </Grid>

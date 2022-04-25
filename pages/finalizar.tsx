@@ -200,14 +200,18 @@ const Finish: NextPage = () => {
                   </ChakraLink>
                 </Link>{" "}
                 ou nos envie uma mensagem no{" "}
-                <Button
-                  leftIcon={<AiOutlineWhatsApp />}
-                  colorScheme="whatsapp"
-                  size="xs"
-                  mx={2}
-                >
-                  Whatsapp
-                </Button>
+                <Link href={`https://wa.me/${configs.whatsapp}`} passHref>
+                  <a target={"_blank"}>
+                    <Button
+                      leftIcon={<AiOutlineWhatsApp />}
+                      colorScheme="whatsapp"
+                      size="xs"
+                      mx={2}
+                    >
+                      Whatsapp
+                    </Button>
+                  </a>
+                </Link>
                 para ficar por dentro das novidades, dos horários das aulas e
                 das turmas. Aproveite para ir tirando as dúvidas com o Professor
                 Natanael Bezerra sobre todas as atividades do curso.
@@ -245,14 +249,18 @@ const Finish: NextPage = () => {
                   </ChakraLink>
                 </Link>{" "}
                 ou nos envie uma mensagem no{" "}
-                <Button
-                  leftIcon={<AiOutlineWhatsApp />}
-                  colorScheme="whatsapp"
-                  size="xs"
-                  mx={2}
-                >
-                  Whatsapp
-                </Button>
+                <Link href={`https://wa.me/${configs.whatsapp}`} passHref>
+                  <a target={"_blank"}>
+                    <Button
+                      leftIcon={<AiOutlineWhatsApp />}
+                      colorScheme="whatsapp"
+                      size="xs"
+                      mx={2}
+                    >
+                      Whatsapp
+                    </Button>
+                  </a>
+                </Link>
                 para ficar por dentro das novidades, dos horários das aulas e
                 das turmas. Aproveite para ir tirando as dúvidas com o Professor
                 Natanael Bezerra sobre todas as atividades do curso.
@@ -296,14 +304,18 @@ const Finish: NextPage = () => {
                 </Link>
                 , caso esteja enfrentando algum problema com o pagamento entre
                 em contato conosco através do{" "}
-                <Button
-                  leftIcon={<AiOutlineWhatsApp />}
-                  colorScheme="whatsapp"
-                  size="xs"
-                  mx={2}
-                >
-                  Whatsapp
-                </Button>
+                <Link href={`https://wa.me/${configs.whatsapp}`} passHref>
+                  <a target={"_blank"}>
+                    <Button
+                      leftIcon={<AiOutlineWhatsApp />}
+                      colorScheme="whatsapp"
+                      size="xs"
+                      mx={2}
+                    >
+                      Whatsapp
+                    </Button>
+                  </a>
+                </Link>
                 . Aproveite para ir tirando as dúvidas com o Professor Natanael
                 Bezerra sobre todas as atividades do curso.
               </Text>

@@ -5,6 +5,7 @@ const configs = {
     "sk_test_51KVhUEE6fYYQIxKBCbdgdimLCRPATakWgJD8yQdVHK9nWdVYJJcy0jbWpvvSPwevX4NoYxfvVgYL4FmUpkq4NPtG00AlQbfTyY",
   api_url: "http://localhost:4003",
   discord: "https://discord.gg/H2rwTF2U",
+  whatsapp: "63999711716",
 };
 
 export { configs };
