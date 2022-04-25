@@ -27,12 +27,10 @@ import finishAnimation from "../animations/finish.json";
 import { useRouter } from "next/router";
 import { FaDiscord } from "react-icons/fa";
 import { configs } from "../configs";
-import axios from "axios";
-import { api } from "../configs/axios";
 
 const Finish: NextPage = () => {
   const { query } = useRouter();
-  const { payment_id, status, external_reference } = query;
+  const { status } = query;
   const toast = useToast();
 
   const defaultOptions = {
@@ -58,28 +56,6 @@ const Finish: NextPage = () => {
       isClosable: true,
     });
   }
-
-  async function updateSubscribe() {
-    try {
-      const response = await api.put("/validade", {
-        id: external_reference,
-        paymend_id: payment_id,
-        status,
-      });
-      showToast(response.data.message, "success", "Sucesso");
-    } catch (error) {
-      if (axios.isAxiosError(error) && error.message) {
-        showToast(error.response?.data.message, "error", "Erro");
-      } else {
-        let message = (error as Error).message;
-        showToast(message, "error", "Erro");
-      }
-    }
-  }
-
-  useEffect(() => {
-    updateSubscribe();
-  }, [status]);
 
   return (
     <Fragment>
