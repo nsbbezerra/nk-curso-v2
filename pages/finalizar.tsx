@@ -8,7 +8,6 @@ import {
   Icon,
   Text,
   Link as ChakraLink,
-  useToast,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -29,9 +28,8 @@ import { FaDiscord } from "react-icons/fa";
 import { configs } from "../configs";
 
 const Finish: NextPage = () => {
-  const { query } = useRouter();
+  const { query, push } = useRouter();
   const { status } = query;
-  const toast = useToast();
 
   const defaultOptions = {
     loop: true,
@@ -42,20 +40,11 @@ const Finish: NextPage = () => {
     },
   };
 
-  function showToast(
-    message: string,
-    status: "error" | "info" | "warning" | "success" | undefined,
-    title: string
-  ) {
-    toast({
-      title: title,
-      description: message,
-      status: status,
-      position: "top-right",
-      duration: 8000,
-      isClosable: true,
-    });
-  }
+  useEffect(() => {
+    if (status === "null" || status === null) {
+      push("/");
+    }
+  }, [status, push]);
 
   return (
     <Fragment>
