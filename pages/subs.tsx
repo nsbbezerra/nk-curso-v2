@@ -37,7 +37,7 @@ import finishAnimation from "../animations/sub.json";
 import { configs } from "../configs";
 import { api } from "../configs/axios";
 
-interface Subs {
+interface SubsProps {
   _id: string;
   name: string;
   cpf: string;
@@ -51,7 +51,7 @@ interface Subs {
 }
 
 interface Props {
-  subs: Subs[];
+  subs: SubsProps[];
 }
 
 const Subs: NextPage<Props> = ({ subs }) => {
